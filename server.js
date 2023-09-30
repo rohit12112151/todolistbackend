@@ -20,6 +20,8 @@ app.use(cors())
 //db config
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
+    useUnifiedTopology: true,
+    dbName: 'todolist'
 }, (err) => {
     if (err) {
         console.log(err)
